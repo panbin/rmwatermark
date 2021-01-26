@@ -32,10 +32,9 @@ class UpdateAnnealingParameter(Callback):
         if self.verbose > 0:
             print('\nEpoch %05d: UpdateAnnealingParameter reducing gamma to %s.' % (epoch + 1, new_gamma))
 
-
 def tf_log10(x):
-    numerator = tf.math.log(x)
-    denominator = tf.math.log(tf.constant(10, dtype=numerator.dtype))
+    numerator = tf.log(x)
+    denominator = tf.log(tf.constant(10, dtype=numerator.dtype))
     return numerator / denominator
 
 
