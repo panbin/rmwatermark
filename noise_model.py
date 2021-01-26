@@ -44,8 +44,8 @@ def get_noise_model(noise_type="gaussian,0,50"):
             paste_mask = watermark.split()[3].point(lambda i: i * TRANSPARENCY / 100.)
             image.paste(watermark, (random_W , random_H ), mask=paste_mask)
 
-            #return img  #测试时请注释这一行 启用48行
-            return image  #训练模型时请注释这一行 启用47行
+            return img  #测试时请注释这一行 启用48行
+            #return image  #训练模型时请注释这一行 启用47行
 
         return add_text
     elif tokens[0] == "impulse":
